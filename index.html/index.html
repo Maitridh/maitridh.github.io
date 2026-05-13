@@ -25,7 +25,7 @@ body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;ov
 #cur{width:8px;height:8px;background:var(--accent);transition:transform 0.08s,background 0.2s;}
 #cur-ring{width:32px;height:32px;border:1px solid rgba(232,197,71,0.4);z-index:9998;transition:transform 0.18s ease,width 0.25s,height 0.25s;}
 body.hovering #cur-ring{width:52px;height:52px;}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 3rem;background:rgba(13,12,11,0.88);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 3rem;background:rgba(13,12,11,0.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.12em;color:var(--white);text-decoration:none;}
 .logo span{color:var(--accent);}
 .nav-links{display:flex;gap:2rem;list-style:none;}
@@ -144,6 +144,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .photo-img-wrap::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:0.25;pointer-events:none;}
 
 /* text side */
+.photo-bio{}
 .photo-bio .sec-label{margin-bottom:0.5rem;}
 .photo-bio-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1;letter-spacing:0.04em;color:var(--white);margin-bottom:1.5rem;}
 .photo-bio-title em{color:var(--accent);font-style:normal;}
@@ -170,8 +171,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted);flex-wrap:wrap;gap:1rem;}
 footer a{color:var(--muted);text-decoration:none;transition:color 0.2s;}
 footer a:hover{color:var(--accent);}
-
-.footer-links { display: flex; gap: 1.5rem; }
 
 /* LIGHTBOX */
 #lightbox{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;}
@@ -298,7 +297,7 @@ footer a:hover{color:var(--accent);}
     </div>
 
     <div class="art-item reveal" data-cat="music" onclick="openLB(this)">
-      <img src="images/rose.png" alt="H.E.R Number One Girl">
+      <img src="images/her.png" alt="H.E.R Number One Girl">
       <div class="art-overlay"><div class="art-title">H.E.R — Number One Girl</div><div class="art-cat">Album Art · 2025</div></div>
     </div>
 
@@ -353,7 +352,7 @@ footer a:hover{color:var(--accent);}
     </div>
 
     <div class="art-item reveal" data-cat="music" onclick="openLB(this)">
-      <img src="images/spidey.png" alt="You Are Somebody Spider-Man">
+      <img src="images/spiderman.png" alt="You Are Somebody Spider-Man">
       <div class="art-overlay"><div class="art-title">You Are Somebody</div><div class="art-cat">Pop Culture Poster · 2025</div></div>
     </div>
 
@@ -371,7 +370,6 @@ footer a:hover{color:var(--accent);}
       <img src="images/solistice.png" alt="SOLISTICE">
       <div class="art-overlay"><div class="art-title">SOLISTICE</div><div class="art-cat">Music Poster · 2025</div></div>
     </div>
-
 
 
   </div>
@@ -393,10 +391,10 @@ footer a:hover{color:var(--accent);}
         <div class="photo-img-wrap">
           <!--
             REPLACE THE src BELOW WITH YOUR ACTUAL PHOTO PATH.
-            e.g. src="images/profile.jpg"
+            e.g. src="images/profile.jpeg"
             For now a stylised placeholder is shown.
           -->
-          <img src="images/profile.jpg" alt="Maitri Dharmik">
+          <img src="images/profile.jpeg" alt="Maitri Dharmik">
         </div>
 
         <div class="photo-sticker">Graphic Designer ✦ 2025</div>
@@ -474,9 +472,9 @@ footer a:hover{color:var(--accent);}
 </section>
 
 <footer>
-  <span class="footer-links">© 2023 Maitri Dharmik. All rights reserved.</span>
+  <span>© 2025 Maitri Dharmik. All rights reserved.</span>
   <span>Jabalpur, Madhya Pradesh, India</span>
-  <div class="footer-links">
+  <div style="display:flex;gap:1.5rem;">
     <a rel="noopener" href="https://www.instagram.com/maitridharmik.05/" target="_blank">Instagram</a>
     <a rel="noopener" href="https://www.linkedin.com/in/maitri-dharmik-098277290/" target="_blank">LinkedIn</a>
     <a rel="noopener" href="mailto:maitridh2015@gmail.com">Email</a>
